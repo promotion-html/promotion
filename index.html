@@ -28,7 +28,7 @@
             backdrop-filter: blur(8px);
             padding: 2.5rem;
             border-radius: 12px;
-            max-width: 500px;
+            max-width: 550px;
             width: 100%;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -44,7 +44,7 @@
 
         h2 {
             font-size: 1.1rem;
-            margin-top: 1.5rem;
+            margin-top: 1.8rem;
             margin-bottom: 0.8rem;
             color: #ffffff;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -54,7 +54,7 @@
         p {
             color: #a0a0a0;
             font-size: 0.95rem;
-            line-height: 1.5;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
@@ -69,40 +69,40 @@
             text-decoration: underline;
         }
 
-        /* Projects Section */
-        .projects-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .project-card {
+        /* Project Card & Story */
+        .project-block {
             background: rgba(255, 255, 255, 0.04);
-            padding: 0.8rem 1rem;
+            padding: 1.2rem;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+        }
+
+        .project-header {
             display: flex;
             align-items: center;
             gap: 12px;
+            margin-bottom: 0.8rem;
         }
 
         .project-img {
-            width: 40px;
-            height: 40px;
+            width: 48px;
+            height: 48px;
             border-radius: 6px;
             object-fit: cover;
         }
 
-        .project-info h3 {
+        .project-title h3 {
             margin: 0;
-            font-size: 0.95rem;
-            font-weight: 500;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
         }
 
-        .project-info p {
-            margin: 0;
-            font-size: 0.8rem;
-            color: #888;
+        .story-text {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 0;
         }
 
         /* Audio Section */
@@ -149,24 +149,20 @@
 
         <!-- PROJECTS SECTION -->
         <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="j7_lineageos.png" alt="J7 LineageOS" class="project-img" onerror="this.style.display='none'">
-                <div class="project-info">
-                    <h3>Samsung Galaxy J7 LineageOS</h3>
-                    <p>Custom ROM setup & tweaking</p>
-                </div>
-            </div>
 
-            <div class="project-card">
-                <div class="project-info">
-                    <h3>DIY Tablet Project</h3>
-                    <p>Hardware & Android-x86 experiments</p>
+        <div class="project-block">
+            <div class="project-header">
+                <img src="j7_lineageos.png" alt="J7 LineageOS" class="project-img" onerror="this.style.display='none'">
+                <div class="project-title">
+                    <h3>Samsung Galaxy J7 LineageOS</h3>
                 </div>
             </div>
+            <p class="story-text">
+                So in late 2025 i got into custom romming and custom rommed my old Galaxy J7 (2015 and yes its a laggy phone when connected to Wi-Fi) So First thing i did was Remove all my Google Accounts from the j7 to prevent from FRP lock and and i Backed up all the photos and put it to a External 1TB Harddrive and i Tried Flashing twrp it didnt detect... dumb me i forgot to install the driversss... and yeah i installed it and flashed twrp and i wiped the phone and tried to install Lineage os 18 and it kept giving error and error until it bricked the phone yeah i was so dumb back then that i didnt follow a tutorial but it kept showing me to download smart switch software but i searched but its discontinued the new smart switch is for tansferring files to an old phone to a new phone... so after a bit of research i found Frija put my imei and serial number downloaded the file flashed it and then i thought myself that i think i should follow a tutorial so i did that and i had to install lineage recover to flash the FILE so thats the reason why twrp gave me errors flashed the rom and gapps yeah it was great i felt happy and proud i did a custom rom.....
+            </p>
         </div>
 
-        <!-- AUDIO SECTION -->
+        <!-- MUSIC SECTION -->
         <h2>Music</h2>
         <div class="audio-section">
             <div class="track">
