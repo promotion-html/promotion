@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProMotion's Website (Beta)</title>
+  <style>
+    /* CSS Variables for quick tuning */
+    :root {
+      --bg-overlay: rgba(15, 15, 20, 0.75);
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --text-main: #f0f0f5;
+      --text-muted: #a0a0b0;
+      --accent: #64ffda;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      /* Background Image Configuration */
+      background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('bg.avif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    header {
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    /* Details / Summary Accordion Styling */
+    details {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      transition: background 0.2s ease;
+    }
+
+    details[open] {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    summary {
+      padding: 14px 16px;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      color: var(--accent);
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .content {
+      padding: 0 16px 16px 16px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .content p {
+      margin-bottom: 12px;
+    }
+
+    .content p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Image Display Area */
+    .image-container {
+      margin-top: 15px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      color: var(--text-muted);
+    }
+
+    /* Social Links Styling */
+    .social-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social-card {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 16px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .social-card:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>ProMotion's Website (Beta)</h1>
+      <p class="subtitle">Minimalist • Fast • Resource-Conscious</p>
+    </header>
+
+    <!-- STORY & PROJECTS SECTION -->
+    <section>
+      <h2>Featured Project</h2>
+
+      <details open>
+        <summary>My First Custom ROM: Samsung Galaxy J7 (2015)</summary>
+        <div class="content">
+          <p>
+            In late 2025, I got into custom ROMs and decided to revive my old 2015 Samsung Galaxy J7 (which was super laggy whenever connected to Wi-Fi). 
+          </p>
+          <p>
+            First, I removed all my Google Accounts to prevent FRP (Factory Reset Protection) lock and backed up all my photos to an external 1TB hard drive. When I tried flashing TWRP, the PC didn't detect the phone—turned out I forgot to install the Samsung USB drivers! Once the drivers were installed, I flashed TWRP, wiped the phone, and tried installing LineageOS 18.
+          </p>
+          <p>
+            It kept throwing errors over and over until the phone soft-bricked. Without following a tutorial, the phone got stuck prompting to connect to Samsung Smart Switch. After realizing the desktop version was discontinued, I researched and found Frija, entered my phone's IMEI/Serial Number, downloaded the stock firmware, and unbricked it with Odin.
+          </p>
+          <p>
+            Lesson learned! I followed a proper tutorial the second time around, flashed Lineage Recovery (which solved the TWRP error), and successfully installed LineageOS 18 alongside GApps. Flashing my first custom ROM and seeing it boot up felt amazing—I was super proud of making it work!
+          </p>
+
+          <div class="image-container">
+            <img src="j7_lineageos.png" alt="LineageOS 18 on Galaxy J7" />
+            <p class="caption">LineageOS 18 running on the Galaxy J7 (2015)</p>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>System Setup & Workflow</summary>
+        <div class="content">
+          <p>Optimized low-overhead development environment tailored for legacy dual-core systems, 4GB RAM, and mechanical hard drives.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- SOCIALS SECTION -->
+    <section>
+      <h2>Connect</h2>
+      <div class="social-links">
+        <a href="https://www.youtube.com/@i120HzOfficial" target="_blank" rel="noopener" class="social-card">YouTube</a>
+        <a href="https://x.com/i120hzofficial" target="_blank" rel="noopener" class="social-card">X (Twitter)</a>
+        <a href="https://dsc.gg/hardware-havoc" target="_blank" rel="noopener" class="social-card">Discord Server</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Built with Vanilla HTML/CSS • Opened in Thorium</p>
+      <p>&copy; 2026 Promotion.html. All rights reserved.</p>
+    </footer>
+  </main>
+
+</body>
+</html>
