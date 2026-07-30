@@ -69,25 +69,56 @@
             text-decoration: underline;
         }
 
-        /* Project Card & Story */
+        /* Social Links Bar */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        /* Clickable Project Card */
+        .project-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .project-block {
             background: rgba(255, 255, 255, 0.04);
-            padding: 1.2rem;
+            padding: 1rem;
             border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.05);
-            margin-bottom: 1rem;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card-link:hover .project-block {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .project-header {
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 0.8rem;
         }
 
         .project-img {
-            width: 48px;
-            height: 48px;
+            width: 44px;
+            height: 44px;
             border-radius: 6px;
             object-fit: cover;
         }
@@ -95,14 +126,14 @@
         .project-title h3 {
             margin: 0;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 500;
             color: #fff;
         }
 
-        .story-text {
-            font-size: 0.9rem;
-            color: #ccc;
-            margin-bottom: 0;
+        .project-title p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #888;
         }
 
         /* Audio Section */
@@ -132,12 +163,20 @@
             outline: none;
         }
 
+        /* Credits & Footer */
         .credits {
             margin-top: 1.5rem;
             font-size: 0.85rem;
             color: #888;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 1rem;
+        }
+
+        .footer-copyright {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #555;
         }
     </style>
 </head>
@@ -147,20 +186,26 @@
         <h1>promotion</h1>
         <p>Welcome to my portfolio space.</p>
 
+        <!-- SOCIAL LINKS (UPDATE URLS TO YOUR PROFILES) -->
+        <div class="social-links">
+            <a href="https://x.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer" class="social-link">X (Twitter)</a>
+            <a href="https://youtube.com/@YOUR_HANDLE" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
+            <a href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener noreferrer" class="social-link">Discord</a>
+        </div>
+
         <!-- PROJECTS SECTION -->
         <h2>Projects</h2>
-
-        <div class="project-block">
-            <div class="project-header">
-                <img src="j7_lineageos.png" alt="J7 LineageOS" class="project-img" onerror="this.style.display='none'">
-                <div class="project-title">
-                    <h3>Samsung Galaxy J7 LineageOS</h3>
+        <a href="j7.html" class="project-card-link">
+            <div class="project-block">
+                <div class="project-header">
+                    <img src="j7_lineageos.png" alt="J7 LineageOS" class="project-img" onerror="this.style.display='none'">
+                    <div class="project-title">
+                        <h3>Samsung Galaxy J7 LineageOS</h3>
+                        <p>Click to read full story</p>
+                    </div>
                 </div>
             </div>
-            <p class="story-text">
-                So in late 2025 i got into custom romming and custom rommed my old Galaxy J7 (2015 and yes its a laggy phone when connected to Wi-Fi) So First thing i did was Remove all my Google Accounts from the j7 to prevent from FRP lock and and i Backed up all the photos and put it to a External 1TB Harddrive and i Tried Flashing twrp it didnt detect... dumb me i forgot to install the driversss... and yeah i installed it and flashed twrp and i wiped the phone and tried to install Lineage os 18 and it kept giving error and error until it bricked the phone yeah i was so dumb back then that i didnt follow a tutorial but it kept showing me to download smart switch software but i searched but its discontinued the new smart switch is for tansferring files to an old phone to a new phone... so after a bit of research i found Frija put my imei and serial number downloaded the file flashed it and then i thought myself that i think i should follow a tutorial so i did that and i had to install lineage recover to flash the FILE so thats the reason why twrp gave me errors flashed the rom and gapps yeah it was great i felt happy and proud i did a custom rom.....
-            </p>
-        </div>
+        </a>
 
         <!-- MUSIC SECTION -->
         <h2>Music</h2>
@@ -182,6 +227,11 @@
 
         <div class="credits">
             Music & Content by <a href="https://www.youtube.com/@frokfrdk" target="_blank" rel="noopener noreferrer">@frokfrdk</a>
+        </div>
+
+        <!-- COPYRIGHT FOOTER -->
+        <div class="footer-copyright">
+            &copy; 2026 promotion. All rights reserved.
         </div>
     </div>
 
