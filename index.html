@@ -186,11 +186,11 @@
         <h1>promotion</h1>
         <p>Welcome to my portfolio space.</p>
 
-        <!-- SOCIAL LINKS (UPDATE URLS TO YOUR PROFILES) -->
+        <!-- UPDATED SOCIAL LINKS -->
         <div class="social-links">
-            <a href="https://x.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer" class="social-link">X (Twitter)</a>
-            <a href="https://youtube.com/@YOUR_HANDLE" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
-            <a href="https://discord.gg/YOUR_INVITE" target="_blank" rel="noopener noreferrer" class="social-link">Discord</a>
+            <a href="https://x.com/i120hzofficial" target="_blank" rel="noopener noreferrer" class="social-link">X (Twitter)</a>
+            <a href="https://www.youtube.com/@i120HzOfficial" target="_blank" rel="noopener noreferrer" class="social-link">YouTube</a>
+            <a href="https://dsc.gg/hardware-havoc" target="_blank" rel="noopener noreferrer" class="social-link">Discord</a>
         </div>
 
         <!-- PROJECTS SECTION -->
@@ -212,7 +212,6 @@
         <div class="audio-section">
             <div class="track">
                 <div class="track-title">staircase</div>
-                <!-- Added autoplay to the first track -->
                 <audio controls autoplay>
                     <source src="staircase.wav" type="audio/wav">
                 </audio>
@@ -226,8 +225,9 @@
             </div>
         </div>
 
+        <!-- UPDATED CREDITS LINK -->
         <div class="credits">
-            Music & Content by <a href="https://www.youtube.com/@frokfrdk" target="_blank" rel="noopener noreferrer">@frokfrdk</a>
+            Music & Content by <a href="https://www.youtube.com/@i120HzOfficial" target="_blank" rel="noopener noreferrer">@i120HzOfficial</a>
         </div>
 
         <!-- COPYRIGHT FOOTER -->
@@ -236,5 +236,13 @@
         </div>
     </div>
 
+    <script>
+        window.addEventListener('click', () => {
+            const audio = document.querySelector('audio');
+            if (audio && audio.paused) {
+                audio.play();
+            }
+        }, { once: true });
+    </script>
 </body>
 </html>
